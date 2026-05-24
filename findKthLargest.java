@@ -1,11 +1,10 @@
 import java.util.PriorityQueue;
 
-public class Main {
-    public static int klargest(int[] arr, int k) {
+public class findKthLargest {
+    public static int largest(int[] arr, int k) {
         PriorityQueue<Integer> pq = new PriorityQueue<>();
         for (int num : arr) {
             pq.add(num);
-
             if (pq.size() > k) {
                 pq.poll();
             }
@@ -13,9 +12,9 @@ public class Main {
         return pq.peek();
     }
     public static void main(String[] args) {
-        int[] arr = { 5, 4, 3, 2, 1 };
+        int[] arr = { 5, 4, 3, 6, 7 };
         int k = 2;
-        int ans = klargest(arr, k);
+        int ans = largest(arr, k);
         System.out.println(ans);
     }
 }
