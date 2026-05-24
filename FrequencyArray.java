@@ -1,7 +1,7 @@
 import java.util.HashMap;
 
-public class Main {
-    public static void frequencyArray(int[] arr) {
+public class FrequencyArray {
+    public static void arrayFreq(int[] arr) {
         HashMap<Integer, Integer> hm = new HashMap<>();
         for (int num : arr) {
             hm.put(num, hm.getOrDefault(num, 0) + 1);
@@ -11,7 +11,7 @@ public class Main {
         }
     }
     public static void main(String[] args) {
-        int[] arr = { 4, 3, 2, 1, 1 };
-        frequencyArray(arr);
+        int[] arr = { 3, 2, 1, 10, 2 };
+        arrayFreq(arr);
     }
 }
